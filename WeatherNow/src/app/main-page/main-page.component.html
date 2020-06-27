@@ -1,9 +1,9 @@
 <div class="container">
-    <input #box placeholder="City" (blur)="getCity(box.value)" (keyup.enter)="getCity(box.value)">
-    <button (click)="getCityWeather()">test btn</button>
+    <input #box placeholder="City" (blur)="getCity(box.value);getCityWeather(this.cityUrl)"
+        (keyup.enter)="getCity(box.value);getCityWeather(this.cityUrl)">
     <div class="input-weather">
-        City: <br>
-        Temp: <br>
-        Status: <br>
+        City: {{city}} <br>
+        Temp: {{cityWeather.temp}} <br>
+        Status: {{cityWeather.status}} <br>
     </div>
 </div>
