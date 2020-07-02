@@ -28,8 +28,8 @@ export class MainPageComponent implements OnInit {
 
   getCity(city: string) {
     this.inputCity = city;
-    this.cityUrl = 'https://openweathermap.org/data/2.5/weather?q=' +
-      this.inputCity + '&appid=439d4b804bc8187953eb36d2a8c26a02';
+    this.cityUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' +
+      this.inputCity + '&appid=6fe762d5379ae3f69aa71c8d5df46569';
   }
 
   getWeather(url: string, location: boolean) {
@@ -44,7 +44,7 @@ export class MainPageComponent implements OnInit {
           this.locationCity = data.name;
         }
         else {
-          this.cityWeather.temp = Math.floor(data.main.temp);
+          this.cityWeather.temp = Math.floor(data.main.temp) - 273;
           this.cityWeather.status = data.weather[0].description;
           this.inputCity = data.name;
         }
@@ -58,7 +58,7 @@ export class MainPageComponent implements OnInit {
       let url = "https://api.openweathermap.org/data/2.5/weather?lat="
         + position.coords.latitude.toFixed(3).toString()
         + "&lon=" + position.coords.longitude.toFixed(3).toString()
-        + "&APPID=6fe762d5379ae3f69aa71c8d5df46569";
+        + "&appid=6fe762d5379ae3f69aa71c8d5df46569";
       this.getWeather(url, true);
     }).catch((position) => console.log(position))
   }
