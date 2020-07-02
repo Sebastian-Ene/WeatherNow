@@ -4,7 +4,7 @@
     padding: 0em;
     margin: 0em;
     overflow: hidden;
-    background-color: #002855;
+    background-color: #001845;
 
     h1 {
         margin: 0px;
@@ -12,12 +12,12 @@
         padding: 0.5em 0em;
         font-weight: 400;
         font-size: 3rem;
-        background-color: #001845;
+
     }
 
     button {
         display: block;
-        margin: 2em auto 0em auto;
+        margin: 1em 0em;
         background-color: #0466C8;
         border: none;
         outline: none;
@@ -25,6 +25,10 @@
         padding: 0.5em 2em;
         color: #E1E1E1;
         font-weight: 600;
+    }
+
+    input {
+        margin: 1em 0em;
     }
 
     p {
@@ -40,7 +44,27 @@
         text-align: center;
         margin: 1em 0em;
         color: #707070;
+
+        a {
+            color: whitesmoke
+        }
     }
 
+    .input-weather {
+        width: 60%;
+        height: 30%;
+        margin: 2em auto;
+        padding: 0em 2em;
+        border-radius: 10px;
+        background-color: #002855;
+    }
 
+    .location-weather {
+        width: 60%;
+        height: 30%;
+        margin: 2em auto;
+        padding: 0em 2em;
+        border-radius: 10px;
+        background-color: #002855;
+    }
 }

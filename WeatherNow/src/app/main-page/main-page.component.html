@@ -1,18 +1,23 @@
 <div class="container">
     <h1>Weather Now</h1>
-    <div class="input-weather">
-        <input #box placeholder="City" (keyup.enter)="getCity(box.value);getWeather(this.cityUrl,false)">
-        <p> City: {{inputCity}} </p>
-        <p>Temp: {{cityWeather.temp}} </p>
-        <p> Status: {{cityWeather.status}} </p>
-    </div>
+
     <div class="location-weather">
+        <h3>View weather by location</h3>
+        <button (click)="getLocationWeather() ">Use Location</button>
         City: {{locationCity}} <br>
         Temp: {{locationWeather.temp}} <br>
         Status: {{locationWeather.status}} <br>
     </div>
 
-    <button (click)="getLocationWeather() ">Use Location</button>
-    <div class="footer">This web app is part of <a href="https://www.linkedin.com/in/sebastian-ene/">Sebastian's</a>
-        Portfolio</div>
+    <div class="input-weather">
+        <h3>View weather by city</h3>
+        <input #box placeholder="City" (keyup.enter)="getCity(box.value);getWeather(this.cityUrl,false)">
+        <p> City: {{inputCity}} </p>
+        <p>Temp: {{cityWeather.temp}} </p>
+        <p> Status: {{cityWeather.status}} </p>
+    </div>
+
+    <div class="footer">This web app is part of <a
+            href="https://www.linkedin.com/in/sebastian-ene/">Sebastian's</a>Portfolio
+    </div>
 </div>
