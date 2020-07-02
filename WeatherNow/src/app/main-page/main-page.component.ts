@@ -55,7 +55,7 @@ export class MainPageComponent implements OnInit {
   getLocationWeather() {
     const p: any = new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject));
     p.then((position) => {
-      let url = "http://api.openweathermap.org/data/2.5/weather?lat="
+      let url = "https://api.openweathermap.org/data/2.5/weather?lat="
         + position.coords.latitude.toFixed(3).toString()
         + "&lon=" + position.coords.longitude.toFixed(3).toString()
         + "&APPID=6fe762d5379ae3f69aa71c8d5df46569";

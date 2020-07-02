@@ -103,8 +103,13 @@
           "options": {
             "browserTarget": "WeatherNow:build"
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "WeatherNow"
 }
